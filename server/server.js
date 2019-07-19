@@ -5,31 +5,31 @@ const app = express();
 
 app.use('/:pid', express.static(`./public`));
 
-app.use('/api/photos/:id', proxy('http://127.0.0.1:3001', {
+app.all('/api/photos/:id', proxy('http://localhost:3001', {
   proxyReqPathResolver: (req) => {
     console.log(req.url);
-    return `/api/photos${req.url}`;
+    return `${req.url}`;
   }
 }));
 
-app.use('/api/itemSummary/:id', proxy('http://127.0.0.1:3002', {
+app.all('/api/itemSummary/:id', proxy('http://localhost:3002', {
   proxyReqPathResolver: (req) => {
     console.log(req.url);
-    return `/api/itemSummary${req.url}`;
+    return `${req.url}`;
   }
 }));
 
-app.use('/api/product/:id', proxy('http://127.0.0.1:3003', {
+app.all('/api/product/:id', proxy('http://localhost:3003', {
   proxyReqPathResolver: (req) => {
     console.log(req.url);
-    return `/api/product${req.url}`;
+    return `${req.url}`;
   }
 }));
 
-app.use('/api/reviews/:id', proxy('http://127.0.0.1:3004', {
+app.all('/api/reviews/:id', proxy('http://localhost:3004', {
   proxyReqPathResolver: (req) => {
     console.log(req.url);
-    return `/api/reviews${req.url}`;
+    return `${req.url}`;
   }
 }));
 
