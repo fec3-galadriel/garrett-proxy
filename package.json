@@ -1,0 +1,44 @@
+{
+  "name": "garrett-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js",
+    "build": "webpack -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fec3-galadriel/garrett-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fec3-galadriel/garrett-proxy/issues"
+  },
+  "homepage": "https://github.com/fec3-galadriel/garrett-proxy#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "babel-loader": "^8.0.6",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.5.1",
+    "http-proxy": "^1.17.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
