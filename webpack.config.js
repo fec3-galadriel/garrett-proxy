@@ -1,7 +1,11 @@
 const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 
 module.exports = {
+  plugins: [
+    new BundleAnalyzerPlugin()
+  ],
   mode: 'development',
   entry: {
     vendor: ["styled-components"],
